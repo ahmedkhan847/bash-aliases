@@ -57,6 +57,10 @@ kubeExecContainer () {
   kubectl exec -n $1 -c $2 $3 -- $3
 }
 
+kubeGetNamespaces () {
+  kubectl get namespaces
+}
+
 kubePortForward () {
   kubectl port-forward -n $1 $2 $3
 }
