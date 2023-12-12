@@ -14,6 +14,10 @@ alias grebase="git rebase"
 alias gs="git status"
 alias gstash="git stash"
 alias gstashp="git stash pop"
+alias compinstall='COMPOSER_MEMORY_LIMIT=-1 composer install --ignore-platform-reqs'
+alias comprequire='COMPOSER_MEMORY_LIMIT=-1 composer require --ignore-platform-reqs'
+alias compupdate='COMPOSER_MEMORY_LIMIT=-1 composer update --ignore-platform-reqs'
+
 gcommit() {
   msg="$1"
   branch=$(git rev-parse --abbrev-ref HEAD)
